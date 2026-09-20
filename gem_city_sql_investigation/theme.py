@@ -1,0 +1,60 @@
+"""University of Dayton-inspired course styling without university marks."""
+
+UD_NAVY = "#141B4D"
+UD_RED = "#E4022B"
+UD_TURQUOISE = "#59CBE8"
+INK = "#1E1E11"
+PALE_TURQUOISE = "#E8F9FD"
+
+APP_CSS = f"""
+<style>
+  :root {{ --navy:{UD_NAVY}; --red:{UD_RED}; --aqua:{UD_TURQUOISE}; --ink:{INK}; --pale:{PALE_TURQUOISE}; }}
+  .stApp {{ background:#F7F8FB; }}
+  section[data-testid="stMain"] {{ overflow-anchor:none; }}
+  [data-testid="stDecoration"] {{ background:var(--red); }}
+  [data-testid="stToolbar"], [data-testid="stHeaderActionElements"] {{ display:none; }}
+  [data-testid="stIFrame"], iframe[title="st.iframe"] {{ height:0 !important; min-height:0 !important; border:0 !important; }}
+  div[data-testid="stElementContainer"]:has(iframe[title="st.iframe"]) {{ height:0 !important; min-height:0 !important; margin:0 !important; }}
+  .block-container {{ max-width:1120px; padding-top:1.25rem; padding-bottom:4rem; }}
+  h1, h2, h3 {{ color:var(--navy); letter-spacing:-.018em; }}
+  p, li, label {{ color:var(--ink); }}
+  .hero {{ background:linear-gradient(128deg,var(--navy) 0%,#202B73 78%,#273587 100%); border-top:7px solid var(--red); border-radius:18px; box-shadow:0 15px 38px rgba(20,27,77,.16); padding:1.8rem 2rem; margin-bottom:1rem; position:relative; overflow:hidden; }}
+  .hero:after {{ content:""; position:absolute; width:210px; height:210px; right:-75px; top:-100px; border:28px solid rgba(89,203,232,.32); border-radius:50%; }}
+  .hero .kicker {{ color:var(--aqua); font-size:.78rem; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }}
+  .hero h1 {{ color:white; margin:.22rem 0 .35rem; font-size:clamp(2rem,4.8vw,3.45rem); }}
+  .hero p {{ color:#F5F7FF; font-size:1.08rem; max-width:810px; margin:0; }}
+  .stage-row {{ display:grid; grid-template-columns:repeat(6,1fr); gap:.42rem; margin:0 0 1.25rem; }}
+  .stage-pill {{ background:#EAECF2; border:1px solid #D5D8E2; border-radius:999px; color:#555D75; font-size:.72rem; font-weight:760; padding:.46rem .42rem; text-align:center; }}
+  .stage-pill.complete {{ background:var(--pale); border-color:#A9DEEA; color:var(--navy); }}
+  .stage-pill.active {{ background:var(--red); border-color:var(--red); color:white; }}
+  .eyebrow {{ color:var(--red); font-size:.78rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }}
+  .lead {{ color:#4F5668; font-size:1.05rem; max-width:880px; }}
+  .case-card {{ background:white; border:1px solid #D9DCE6; border-left:6px solid var(--aqua); border-radius:13px; box-shadow:0 8px 22px rgba(20,27,77,.06); margin:.8rem 0 1rem; padding:1.05rem 1.2rem; }}
+  .case-card strong {{ color:var(--navy); }}
+  .schema-grid {{ display:grid; grid-template-columns:repeat(5,1fr); gap:.62rem; margin:.8rem 0 1.1rem; }}
+  .schema-table {{ background:white; border:1px solid #D8DCE7; border-radius:12px; overflow:hidden; }}
+  .schema-table h4 {{ background:var(--navy); color:white; margin:0; padding:.62rem .7rem; }}
+  .schema-table .schema-field {{ border-top:1px solid #E5E7EE; color:#33384A; font-size:.82rem; padding:.4rem .7rem; }}
+  .schema-table .schema-field.primary-key {{ background:#FFF3F4; color:var(--red); font-weight:800; }}
+  .schema-key {{ align-items:center; color:#555B6D; display:flex; font-size:.82rem; gap:.48rem; margin:.7rem 0 -.18rem; }}
+  .schema-key span {{ background:#FFF3F4; border:1px solid #F1C5CA; border-radius:6px; color:var(--red); font-weight:800; padding:.18rem .42rem; }}
+  .principle {{ background:var(--pale); border-left:5px solid var(--navy); border-radius:9px; margin:.75rem 0 1rem; padding:.82rem .95rem; }}
+  .principle strong {{ color:var(--navy); }}
+  .feedback {{ background:white; border:1px solid #D9DCE6; border-left:5px solid #8A5A00; border-radius:9px; margin:.45rem 0; padding:.72rem .82rem; }}
+  .feedback.correct {{ border-left-color:#147A4B; }}
+  .feedback strong {{ color:var(--navy); }}
+  .purpose {{ background:white; border:1px solid #D9DCE6; border-left:6px solid var(--aqua); border-radius:12px; padding:1rem 1.1rem; margin:.7rem 0 1rem; }}
+  .purpose strong {{ color:var(--navy); }}
+  .logic-grid {{ display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; margin:.85rem 0 1.1rem; }}
+  .logic-card {{ background:white; border:1px solid #D8DCE7; border-top:5px solid var(--aqua); border-radius:14px; box-shadow:0 8px 22px rgba(20,27,77,.06); padding:1rem 1.05rem; }}
+  .logic-card h4 {{ color:var(--navy); font-size:1.02rem; margin:.28rem 0 .48rem; }}
+  .logic-card p {{ color:#4F5668; font-size:.92rem; margin:0; }}
+  .logic-label {{ color:var(--red); font-size:.68rem; font-weight:850; letter-spacing:.08em; }}
+  .stCodeBlock {{ border:1px solid #D5D8E2; border-radius:10px; }}
+  .stButton > button, .stFormSubmitButton > button {{ border-radius:9px; font-weight:780; min-height:2.7rem; }}
+  button[data-testid="stBaseButton-primary"], button[data-testid="stBaseButton-primaryFormSubmit"] {{ background:var(--red); border-color:var(--red); color:white; }}
+  button[data-testid="stBaseButton-primary"] p, button[data-testid="stBaseButton-primaryFormSubmit"] p {{ color:white !important; }}
+  @media (max-width:820px) {{ .block-container{{padding-left:1rem;padding-right:1rem}} .hero{{padding:1.35rem 1.15rem}} .stage-row{{grid-template-columns:1fr}} .stage-pill{{display:none}} .stage-pill.active{{display:block}} .schema-grid{{grid-template-columns:1fr 1fr}} .logic-grid{{grid-template-columns:1fr}} }}
+  @media (max-width:520px) {{ .schema-grid{{grid-template-columns:1fr}} }}
+</style>
+"""
