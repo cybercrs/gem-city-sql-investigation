@@ -9,17 +9,22 @@ from typing import Any
 
 from .case_data import (
     AMOUNT_CAUSE_CORRECT,
+    AMOUNT_CAUSE_HINTS,
     AMOUNT_FIELD_CORRECT,
+    AMOUNT_FIELD_HINTS,
     CUSTOMERS,
     EXPECTED_ACCOUNTING,
     EXPECTED_AUDIT,
     MISSING_CAUSE_CORRECT,
+    MISSING_CAUSE_HINTS,
     MISSING_REPAIR_CORRECT,
+    MISSING_REPAIR_HINTS,
     ORDERS,
     ORDER_LINES,
     PAYMENTS,
     PRODUCTS,
     READ_QUESTIONS,
+    READ_HINTS,
     ROUTES,
 )
 
@@ -128,7 +133,18 @@ def evaluate_reading(responses: dict[str, str]) -> tuple[bool, list[dict[str, An
     for item_id, prompt, _, answer, explanation in READ_QUESTIONS:
         selected = responses.get(item_id, "")
         details.append(
-            {"id": item_id, "prompt": prompt, "selected": selected, "answer": answer, "correct": selected == answer, "explanation": explanation}
+            {
+                "id": item_id,
+                "prompt": prompt,
+                "selected": selected,
+                "answer": answer,
+                "correct": selected == answer,
+                "explanation": explanation,
+                "hint": READ_HINTS.get(item_id, {}).get(
+                    selected,
+                    "Revisit the role each clause plays in building, filtering, and displaying the result.",
+                ),
+            }
         )
     return all(item["correct"] for item in details), details
 
@@ -142,6 +158,10 @@ def evaluate_missing(responses: dict[str, str]) -> tuple[bool, list[dict[str, An
             "answer": MISSING_REPAIR_CORRECT,
             "correct": responses.get("repair") == MISSING_REPAIR_CORRECT,
             "explanation": "A left join keeps every order, and unmatched payment columns become NULL for the WHERE test.",
+            "hint": MISSING_REPAIR_HINTS.get(
+                responses.get("repair", ""),
+                "Trace which orders survive the join before the missing-payment condition is evaluated.",
+            ),
         },
         {
             "id": "cause",
@@ -150,6 +170,10 @@ def evaluate_missing(responses: dict[str, str]) -> tuple[bool, list[dict[str, An
             "answer": MISSING_CAUSE_CORRECT,
             "correct": responses.get("cause") == MISSING_CAUSE_CORRECT,
             "explanation": "The original inner join kept only orders that already had a payment match, so no surviving row could have a NULL PaymentID.",
+            "hint": MISSING_CAUSE_HINTS.get(
+                responses.get("cause", ""),
+                "Trace what must happen to an order with no matching payment before the filter can identify it.",
+            ),
         },
     ]
     return all(item["correct"] for item in details), details
@@ -164,6 +188,10 @@ def evaluate_amount(responses: dict[str, str]) -> tuple[bool, list[dict[str, Any
             "answer": AMOUNT_FIELD_CORRECT,
             "correct": responses.get("field") == AMOUNT_FIELD_CORRECT,
             "explanation": "ActualUnitPrice is stored on each line because it is a historical transaction fact.",
+            "hint": AMOUNT_FIELD_HINTS.get(
+                responses.get("field", ""),
+                "Look for the value that records the price used on the individual transaction line.",
+            ),
         },
         {
             "id": "cause",
@@ -172,6 +200,10 @@ def evaluate_amount(responses: dict[str, str]) -> tuple[bool, list[dict[str, Any
             "answer": AMOUNT_CAUSE_CORRECT,
             "correct": responses.get("cause") == AMOUNT_CAUSE_CORRECT,
             "explanation": "StandardPrice is current master data and remains useful as a benchmark, but it does not prove what the customer was charged on an earlier transaction.",
+            "hint": AMOUNT_CAUSE_HINTS.get(
+                responses.get("cause", ""),
+                "Distinguish a current benchmark from evidence stored with the historical transaction.",
+            ),
         },
     ]
     return all(item["correct"] for item in details), details

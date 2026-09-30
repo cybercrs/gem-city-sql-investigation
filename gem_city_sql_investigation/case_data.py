@@ -78,6 +78,24 @@ READ_QUESTIONS = (
     ),
 )
 
+READ_HINTS = {
+    "source": {
+        "SELECT": "Separate the written order from the database's logical work. Which clauses identify the starting rows and connect related tables before filtering?",
+        "WHERE": "Filtering can occur only after candidate rows exist. Look for the clauses that establish those rows.",
+        "ORDER BY": "Sorting changes row sequence, not row membership. Trace where the row set is first assembled.",
+    },
+    "filter": {
+        "SELECT": "Displayed columns do not decide which rows survive. Look for the clause that evaluates a condition after the joins.",
+        "ON": "ON controls how tables match during a join. Which later clause tests the reporting condition for the assembled rows?",
+        "GROUP BY": "Grouping changes the level of summarization. Look for the clause that keeps or removes rows based on a condition.",
+    },
+    "output": {
+        "FROM": "FROM identifies the starting source, not the displayed columns. Which expressions define what appears in the result?",
+        "ON": "ON defines how rows match between tables. Look at the part of the query that names the output fields.",
+        "WHERE": "WHERE determines which rows qualify, not which columns are shown. Which part lists the result fields?",
+    },
+}
+
 READ_QUERY = """SELECT c.CustomerName,
        o.OrderID,
        ol.Quantity * ol.ActualUnitPrice AS LineAmount
@@ -113,6 +131,18 @@ MISSING_REPAIR_OPTIONS = (
 )
 MISSING_REPAIR_CORRECT = MISSING_REPAIR_OPTIONS[0]
 
+MISSING_REPAIR_HINTS = {
+    MISSING_REPAIR_OPTIONS[1]: "The report still needs a test that isolates missing matches, so removing the filter cannot identify unpaid orders. Focus on preserving unmatched orders before that test runs.",
+    MISSING_REPAIR_OPTIONS[2]: "Pairing every order with every payment would invent combinations rather than reveal a missing relationship. Consider which type of join can preserve an order with no match.",
+    MISSING_REPAIR_OPTIONS[3]: "That condition describes rows with an existing payment identifier. The controller needs the opposite population.",
+}
+
+MISSING_CAUSE_HINTS = {
+    MISSING_CAUSE_OPTIONS[1]: "Ask whether the current join can leave any surviving row without a payment match.",
+    MISSING_CAUSE_OPTIONS[2]: "Creating every possible order-payment combination does not provide evidence of an unmatched row. Focus on what a missing match should look like in the joined result.",
+    MISSING_CAUSE_OPTIONS[3]: "Check whether the proposed condition describes an existing payment or a missing one.",
+}
+
 MISSING_REPAIRED_QUERY = """SELECT o.OrderID, c.CustomerName
 FROM Orders AS o
 JOIN Customers AS c
@@ -147,6 +177,18 @@ AMOUNT_FIELD_OPTIONS = (
     "ol.Quantity",
 )
 AMOUNT_FIELD_CORRECT = "ol.ActualUnitPrice"
+
+AMOUNT_FIELD_HINTS = {
+    AMOUNT_FIELD_OPTIONS[1]: "Distinguish a product benchmark from the amount recorded on the individual order line.",
+    AMOUNT_FIELD_OPTIONS[2]: "A fixed percentage assumes every discount is identical. Look for the stored transaction-specific amount.",
+    AMOUNT_FIELD_OPTIONS[3]: "Quantity tells how many units were sold, but sales also needs the price recorded for that line.",
+}
+
+AMOUNT_CAUSE_HINTS = {
+    AMOUNT_CAUSE_OPTIONS[1]: "Master data can change and discounts can vary. Which record preserves what actually happened in the transaction?",
+    AMOUNT_CAUSE_OPTIONS[2]: "A formula assumes the discount rather than reading the recorded exchange. Look for transaction-level evidence.",
+    AMOUNT_CAUSE_OPTIONS[3]: "Units alone do not produce a dollar amount. Identify the line-level price needed with quantity.",
+}
 
 ROUTES = ("Accounting report", "Audit exception report")
 

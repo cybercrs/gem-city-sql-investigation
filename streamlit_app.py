@@ -187,12 +187,12 @@ def render_stage_row() -> None:
     st.markdown(f'<div class="stage-row">{"".join(pills)}</div>', unsafe_allow_html=True)
 
 
-def render_feedback(label: str, correct: bool, explanation: str, selected: str = "") -> None:
+def render_feedback(label: str, correct: bool, guidance: str, selected: str = "") -> None:
     status = "correct" if correct else ""
     result = "Correct" if correct else "Reconsider"
     selection = f" Your answer: {escape(selected)}." if selected else ""
     st.markdown(
-        f'<div class="feedback {status}"><strong>{escape(label)} — {result}.</strong>{selection} {escape(explanation)}</div>',
+        f'<div class="feedback {status}"><strong>{escape(label)} — {result}.</strong>{selection} {escape(guidance)}</div>',
         unsafe_allow_html=True,
     )
 
@@ -296,8 +296,8 @@ def render_reading() -> None:
         details_by_id = {str(detail["id"]): detail for detail in details}
         for item_id, _, _, _, _ in ordered_questions:
             detail = details_by_id[item_id]
-            explanation = f"Correct answer: {detail['answer']}. {detail['explanation']}"
-            render_feedback(str(detail["prompt"]), bool(detail["correct"]), explanation, str(detail["selected"]))
+            guidance = str(detail["explanation"]) if detail["correct"] else f"Hint: {detail['hint']}"
+            render_feedback(str(detail["prompt"]), bool(detail["correct"]), guidance, str(detail["selected"]))
         if correct:
             st.button("Continue to the missing-record case", type="primary", width="stretch", on_click=set_stage, args=(2,))
 
@@ -350,8 +350,8 @@ def render_missing() -> None:
         details_by_id = {str(detail["id"]): detail for detail in details}
         for item_id, _, _ in question_specs:
             detail = details_by_id[item_id]
-            explanation = f"Correct answer: {detail['answer']}. {detail['explanation']}"
-            render_feedback(str(detail["label"]), bool(detail["correct"]), explanation, str(detail["selected"]))
+            guidance = str(detail["explanation"]) if detail["correct"] else f"Hint: {detail['hint']}"
+            render_feedback(str(detail["label"]), bool(detail["correct"]), guidance, str(detail["selected"]))
         if correct:
             st.subheader("Repaired query and result")
             st.code(MISSING_REPAIRED_QUERY, language="sql")
@@ -411,8 +411,8 @@ def render_amount() -> None:
         details_by_id = {str(detail["id"]): detail for detail in details}
         for item_id, _, _ in question_specs:
             detail = details_by_id[item_id]
-            explanation = f"Correct answer: {detail['answer']}. {detail['explanation']}"
-            render_feedback(str(detail["label"]), bool(detail["correct"]), explanation, str(detail["selected"]))
+            guidance = str(detail["explanation"]) if detail["correct"] else f"Hint: {detail['hint']}"
+            render_feedback(str(detail["label"]), bool(detail["correct"]), guidance, str(detail["selected"]))
         if correct:
             st.markdown(
                 '<div class="principle"><strong>Correct measure</strong> Sales for each line are ol.Quantity × ol.ActualUnitPrice. p.StandardPrice remains useful for exception testing, but it is not the recorded exchange amount.</div>',

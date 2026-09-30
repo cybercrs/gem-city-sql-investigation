@@ -4,9 +4,13 @@ from streamlit.testing.v1 import AppTest
 
 from gem_city_sql_investigation.case_data import (
     AMOUNT_CAUSE_CORRECT,
+    AMOUNT_CAUSE_OPTIONS,
     AMOUNT_FIELD_CORRECT,
+    AMOUNT_FIELD_OPTIONS,
     MISSING_CAUSE_CORRECT,
+    MISSING_CAUSE_OPTIONS,
     MISSING_REPAIR_CORRECT,
+    MISSING_REPAIR_OPTIONS,
     READ_QUESTIONS,
 )
 from gem_city_sql_investigation.progress import SNAPSHOT_PARAM, decode_snapshot
@@ -15,6 +19,10 @@ from tests.test_engine import ACCOUNTING_SQL, AUDIT_SQL
 
 def button(app: AppTest, label: str):
     return next(item for item in app.button if item.label == label)
+
+
+def feedback_html(app: AppTest) -> list[str]:
+    return [item.value for item in app.markdown if 'class="feedback' in item.value]
 
 
 class AppFlowTests(unittest.TestCase):
@@ -104,6 +112,50 @@ class AppFlowTests(unittest.TestCase):
         self.assertEqual(app.session_state["si_reading"][first_id], first_answer)
         self.assertTrue(any(item.label == "Continue to the missing-record case" for item in app.button))
         self.assertFalse(any(item.label.startswith("Revise") for item in app.button))
+
+    def test_revision_feedback_hints_without_revealing_answers(self):
+        app = AppTest.from_file("streamlit_app.py", default_timeout=30).run()
+        button(app, "Begin reading SQL").click().run()
+        reading_answers = []
+        for item_id, _, options, answer, _ in READ_QUESTIONS:
+            wrong = next(option for option in options if option != answer)
+            reading_answers.append(answer)
+            app.radio(key=f"widget_si_read_{item_id}").set_value(wrong)
+        button(app, "Check how the query works").click().run()
+        rendered = feedback_html(app)
+        self.assertEqual(len(rendered), 3)
+        self.assertTrue(all("Hint:" in item for item in rendered))
+        self.assertTrue(all("Correct answer:" not in item for item in rendered))
+        for answer in reading_answers:
+            self.assertTrue(all(answer not in item for item in rendered))
+
+        app.session_state["si_stage"] = 2
+        app.run()
+        wrong_repair = next(option for option in MISSING_REPAIR_OPTIONS if option != MISSING_REPAIR_CORRECT)
+        wrong_cause = next(option for option in MISSING_CAUSE_OPTIONS if option != MISSING_CAUSE_CORRECT)
+        app.radio(key="widget_si_missing_repair").set_value(wrong_repair)
+        app.radio(key="widget_si_missing_cause").set_value(wrong_cause)
+        button(app, "Diagnose the missing rows").click().run()
+        rendered = feedback_html(app)
+        self.assertEqual(len(rendered), 2)
+        self.assertTrue(all("Hint:" in item for item in rendered))
+        self.assertTrue(all("Correct answer:" not in item for item in rendered))
+        self.assertTrue(all(MISSING_REPAIR_CORRECT not in item for item in rendered))
+        self.assertTrue(all(MISSING_CAUSE_CORRECT not in item for item in rendered))
+
+        app.session_state["si_stage"] = 3
+        app.run()
+        wrong_field = next(option for option in AMOUNT_FIELD_OPTIONS if option != AMOUNT_FIELD_CORRECT)
+        wrong_cause = next(option for option in AMOUNT_CAUSE_OPTIONS if option != AMOUNT_CAUSE_CORRECT)
+        app.radio(key="widget_si_amount_field").set_value(wrong_field)
+        app.radio(key="widget_si_amount_cause").set_value(wrong_cause)
+        button(app, "Diagnose the amount").click().run()
+        rendered = feedback_html(app)
+        self.assertEqual(len(rendered), 2)
+        self.assertTrue(all("Hint:" in item for item in rendered))
+        self.assertTrue(all("Correct answer:" not in item for item in rendered))
+        self.assertTrue(all(AMOUNT_FIELD_CORRECT not in item for item in rendered))
+        self.assertTrue(all(AMOUNT_CAUSE_CORRECT not in item for item in rendered))
 
 
 if __name__ == "__main__":

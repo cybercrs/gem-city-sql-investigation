@@ -2,9 +2,13 @@ import unittest
 
 from gem_city_sql_investigation.case_data import (
     AMOUNT_CAUSE_CORRECT,
+    AMOUNT_CAUSE_OPTIONS,
     AMOUNT_FIELD_CORRECT,
+    AMOUNT_FIELD_OPTIONS,
     MISSING_CAUSE_CORRECT,
+    MISSING_CAUSE_OPTIONS,
     MISSING_REPAIR_CORRECT,
+    MISSING_REPAIR_OPTIONS,
     READ_QUESTIONS,
 )
 from gem_city_sql_investigation.engine import (
@@ -41,6 +45,31 @@ class EngineTests(unittest.TestCase):
         self.assertTrue(evaluate_reading(reading)[0])
         self.assertTrue(evaluate_missing({"cause": MISSING_CAUSE_CORRECT, "repair": MISSING_REPAIR_CORRECT})[0])
         self.assertTrue(evaluate_amount({"cause": AMOUNT_CAUSE_CORRECT, "field": AMOUNT_FIELD_CORRECT})[0])
+
+    def test_every_wrong_diagnostic_choice_has_a_nonrevealing_hint(self):
+        for item_id, _, options, answer, _ in READ_QUESTIONS:
+            for option in options:
+                if option == answer:
+                    continue
+                _, details = evaluate_reading({item_id: option})
+                detail = next(item for item in details if item["id"] == item_id)
+                self.assertTrue(detail["hint"])
+                self.assertNotIn(answer.casefold(), detail["hint"].casefold())
+
+        diagnostic_sets = (
+            (evaluate_missing, "repair", MISSING_REPAIR_OPTIONS, MISSING_REPAIR_CORRECT),
+            (evaluate_missing, "cause", MISSING_CAUSE_OPTIONS, MISSING_CAUSE_CORRECT),
+            (evaluate_amount, "field", AMOUNT_FIELD_OPTIONS, AMOUNT_FIELD_CORRECT),
+            (evaluate_amount, "cause", AMOUNT_CAUSE_OPTIONS, AMOUNT_CAUSE_CORRECT),
+        )
+        for evaluator, item_id, options, answer in diagnostic_sets:
+            for option in options:
+                if option == answer:
+                    continue
+                _, details = evaluator({item_id: option})
+                detail = next(item for item in details if item["id"] == item_id)
+                self.assertTrue(detail["hint"])
+                self.assertNotIn(answer.casefold(), detail["hint"].casefold())
 
     def test_custom_routes_are_validated_by_results(self):
         self.assertTrue(evaluate_custom_query("Accounting report", ACCOUNTING_SQL)[0])
