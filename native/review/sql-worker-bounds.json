@@ -1,0 +1,11 @@
+{
+  "sqlite_version": "3.50.4",
+  "first_worker_query_ms": 110,
+  "utf8_result_byte_limit_rejected": true,
+  "recovered_rows": [
+    [
+      6
+    ]
+  ],
+  "conditions": "Fresh Chromium context; local loopback /js/; empty cache; no simulated latency; worker initialization plus first SELECT"
+}

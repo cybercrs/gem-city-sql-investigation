@@ -31,8 +31,8 @@
       "sha256": "3ee18a6a95e0c9e4cc2a2be3280af2df09690585322484ab3aebb56577080afe"
     },
     "sql-worker.js": {
-      "bytes": 3465,
-      "sha256": "0035682269cd4b0d833cb552a4c10decf11e9df26f90c5a30f94bb2ff41067ee"
+      "bytes": 3491,
+      "sha256": "dd612d1b51a79e93a3d04f7e1cdc0cd666e906c5a7f8ec596ec005a39066edf5"
     },
     "sqlite-lock.json": {
       "bytes": 606,
@@ -59,6 +59,6 @@
       "sha256": "3c924f7de0fd0979da11615be99ec826a066f8fc804a91c3ec9c45b7d8f1655f"
     }
   },
-  "application_bytes": 1429598,
+  "application_bytes": 1429624,
   "python_runtime": false
 }

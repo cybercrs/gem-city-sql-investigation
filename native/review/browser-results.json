@@ -67,6 +67,10 @@
     {
       "name": "No external requests, asset failures, or browser execution errors",
       "status": "passed"
+    },
+    {
+      "name": "UTF-8 result byte limit and worker recovery; separately measured cold first worker query",
+      "status": "passed"
     }
   ],
   "console_errors": [],
@@ -79,13 +83,24 @@
     "viewport": "1280x900",
     "browser": "151.0.7922.173",
     "browser_context": "new context; local loopback HTTP; no simulated network latency; cache empty",
-    "application_bytes": 1429598,
-    "gzip_bytes_sum": 500535,
+    "application_bytes": 1429624,
+    "gzip_bytes_sum": 500552,
     "capacity_claim": false
   },
   "not_run": [
     "Hosted UI: known proxy denial",
     "Physical classroom devices/network",
     "Classroom concurrent capacity"
-  ]
+  ],
+  "sqlite_worker": {
+    "sqlite_version": "3.50.4",
+    "first_worker_query_ms": 110,
+    "utf8_result_byte_limit_rejected": true,
+    "recovered_rows": [
+      [
+        6
+      ]
+    ],
+    "conditions": "Fresh Chromium context; local loopback /js/; empty cache; no simulated latency; worker initialization plus first SELECT"
+  }
 }
