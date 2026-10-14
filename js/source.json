@@ -1,7 +1,7 @@
 {
   "repository": "cybercrs/gem-city-sql-investigation",
   "source_branch": "rollout/native-browser",
-  "source_commit": "b2a30236cb8223ea94a3e824bba285d2e7f70389",
-  "existing_static_parent": "2dda42c0e57c47497f9af9b8e0fbc3d1b3af454b",
+  "source_commit": "d3c7a1dc924a3dbec79a3050b69d4c65e7f21a16",
+  "existing_static_parent": "b441853f4bee3c375f8b67c4dbaa5423185859a0",
   "entrypoint": "js/index.html"
 }
