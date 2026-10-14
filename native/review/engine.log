@@ -1,0 +1,13 @@
+✔ CPython rounding matches binary floating point fixtures including half cases (1.283595ms)
+✔ Original accounting/audit result grading matches Python query outcomes (1.109299ms)
+✔ All original saved stages and exact 63-bit seed import after query revalidation (38.684085ms)
+✔ Complete lesson guards, wrong attempts, preserved revisions, repeated reports and readonly query mutation rejection (4.972882ms)
+✔ Untrusted passed-query flags are reexecuted; malformed/future snapshots cannot unlock (4.468206ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.161806

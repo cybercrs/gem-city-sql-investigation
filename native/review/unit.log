@@ -1,0 +1,35 @@
+test_both_query_editors_start_empty (test_app_flow.AppFlowTests.test_both_query_editors_start_empty) ... 2026-10-14 20:12:22.392 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-14 20:12:22.874 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_complete_both_query_routes (test_app_flow.AppFlowTests.test_complete_both_query_routes) ... 2026-10-14 20:12:22.897 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_partial_selection_is_saved_in_the_url (test_app_flow.AppFlowTests.test_partial_selection_is_saved_in_the_url) ... 2026-10-14 20:12:23.223 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_progress_pills_match_numbered_steps (test_app_flow.AppFlowTests.test_progress_pills_match_numbered_steps) ... 2026-10-14 20:12:23.356 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_revision_feedback_hints_without_revealing_answers (test_app_flow.AppFlowTests.test_revision_feedback_hints_without_revealing_answers) ... 2026-10-14 20:12:23.446 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-14 20:12:23.589 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-14 20:12:23.642 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_valid_but_incorrect_query_displays_its_output (test_app_flow.AppFlowTests.test_valid_but_incorrect_query_displays_its_output) ... 2026-10-14 20:12:23.691 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-14 20:12:23.785 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_wrong_answer_can_be_revised_and_checked_in_one_action (test_app_flow.AppFlowTests.test_wrong_answer_can_be_revised_and_checked_in_one_action) ... 2026-10-14 20:12:23.834 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_custom_routes_are_validated_by_results (test_engine.EngineTests.test_custom_routes_are_validated_by_results) ... ok
+test_diagnostic_keys (test_engine.EngineTests.test_diagnostic_keys) ... ok
+test_every_wrong_diagnostic_choice_has_a_nonrevealing_hint (test_engine.EngineTests.test_every_wrong_diagnostic_choice_has_a_nonrevealing_hint) ... ok
+test_read_only_executor_blocks_changes_and_multiple_statements (test_engine.EngineTests.test_read_only_executor_blocks_changes_and_multiple_statements) ... ok
+test_valid_wrong_query_still_returns_its_output (test_engine.EngineTests.test_valid_wrong_query_still_returns_its_output) ... ok
+test_completed_round_trip (test_progress.ProgressTests.test_completed_round_trip) ... ok
+test_future_draft_is_rejected (test_progress.ProgressTests.test_future_draft_is_rejected) ... ok
+test_partial_custom_drafts_round_trip (test_progress.ProgressTests.test_partial_custom_drafts_round_trip) ... ok
+test_partial_draft_and_shuffle_seed_round_trip (test_progress.ProgressTests.test_partial_draft_and_shuffle_seed_round_trip) ... ok
+test_reset_replaces_progress (test_progress.ProgressTests.test_reset_replaces_progress) ... ok
+test_skipped_stage_is_rejected (test_progress.ProgressTests.test_skipped_stage_is_rejected) ... ok
+test_tampered_success_is_rejected (test_progress.ProgressTests.test_tampered_success_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.609s
+
+OK

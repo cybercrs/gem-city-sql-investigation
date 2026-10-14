@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "name": "Native /js/ cold initialization with forward locked",
+      "status": "passed"
+    },
+    {
+      "name": "Real SQLite 3.50.4 worker results match ten original Python queries, joins, CTEs, functions, window functions and NULLs",
+      "status": "passed"
+    },
+    {
+      "name": "Engine authorizer/query-only enforcement rejects mutations, PRAGMA, attachments, transactions, extensions and multiple statements; literals/comments remain valid; row/time limits recover",
+      "status": "passed"
+    },
+    {
+      "name": "reading: wrong choices, independent feedback, revised drafts across refresh, validated advance",
+      "status": "passed"
+    },
+    {
+      "name": "missing: wrong choices, independent feedback, revised drafts across refresh, validated advance",
+      "status": "passed"
+    },
+    {
+      "name": "amount: wrong choices, independent feedback, revised drafts across refresh, validated advance",
+      "status": "passed"
+    },
+    {
+      "name": "Real query output preserves duplicate columns and NULL display; CSV download preserves raw data",
+      "status": "passed"
+    },
+    {
+      "name": "Main-thread cancellation retains SQL draft and earned/attempt state",
+      "status": "passed"
+    },
+    {
+      "name": "Both original reports complete, repeated checks, raw CSV, currency/percentage display and independently restored editor drafts",
+      "status": "passed"
+    },
+    {
+      "name": "All six original Python links import with real saved-query revalidation; future views rejected",
+      "status": "passed"
+    },
+    {
+      "name": "All reached pages review readonly; forward capped; progress token unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "Keyboard focus ring and Enter navigation",
+      "status": "passed"
+    },
+    {
+      "name": "390px layout, no page overflow, 44px navigation touch targets",
+      "status": "passed"
+    },
+    {
+      "name": "Independent sessions start fresh",
+      "status": "passed"
+    },
+    {
+      "name": "Refresh/bookmark behavior matches original saving design",
+      "status": "passed"
+    },
+    {
+      "name": "Malformed/future bookmarks and reset remain fresh",
+      "status": "passed"
+    },
+    {
+      "name": "No external requests, asset failures, or browser execution errors",
+      "status": "passed"
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "external_requests": [],
+  "http_errors": [],
+  "hosted_ui_tested": false,
+  "measurement": {
+    "local_cold_navigation_to_ready_ms": 147.0,
+    "viewport": "1280x900",
+    "browser": "151.0.7922.173",
+    "browser_context": "new context; local loopback HTTP; no simulated network latency; cache empty",
+    "application_bytes": 1429598,
+    "gzip_bytes_sum": 500535,
+    "capacity_claim": false
+  },
+  "not_run": [
+    "Hosted UI: known proxy denial",
+    "Physical classroom devices/network",
+    "Classroom concurrent capacity"
+  ]
+}

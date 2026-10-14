@@ -1,0 +1,327 @@
+{
+  "legacy": [
+    {
+      "stage": 0,
+      "token": "eNqFjUEKwyAABL8S9uxBtKmptzxF1BahUaumlIb8vYree1p2l2EOKMjjJNA1sGoddl-cf0zJxpBKGw0kQBAh7-qZLcGrDRVZd-PKZD_axuKC_49UxrRbbc3SvZvLufp6SVaZUdo1xh4ZkhIM6g3JCb6QN8Y4F4zy6zJfhJgXKs4fkBc_tw"
+    },
+    {
+      "stage": 1,
+      "token": "eNqtj81qwzAQhF_FzFkHx27iVDdTXNqQNJAWehaSUgS2pOgnhIS8e9d26bWXnpad4ZvZvUGA3-4MkgZaKV22ydivImjvQhpFBQ4wePCj6KNmOI0CIW1WJhX6IrVPxtm_EWLUaIthbJl7BxMj9c1L0ELNC46mTzoQ9vnSHToKczn5TBDeu2339EG9PmhinY3kRpeD1OQ-H_a7QlhVbPavb1Pl8JP9j6nkgC8Ypmd_j16QfgavGa7gj1VV101V1qv18qFpluuyuX8DRiBv9w"
+    },
+    {
+      "stage": 2,
+      "token": "eNrlkkFPwzAMhf-K5XOFtpbRUU4TdGKodKgMcY5Sj0WsbUjSwpj233HaadqNCzdOkfzsfM8v2aPAZH8IUPKBMymbtnaqfgNDujHOF0tMEAPUmKzF1lKAH77AI7O2VA7oS5J2qql_H-GZ0sui8pSBWylrmefLUrSWuHEGWTpfwcNykYM2ZMl0ZIE6MjtoTEnmZjgsfCq3aVoHArTYVVQ7qISTG3YiSXUE-UuWnaS1om1pwW2Eg9f7tEhBihocWcdW2btQhuEF6a2QBIs8T4vBw9NwwYA783aqi7qEdyJ9vFZfHJXFHSyeexM-LkOiPG66VltHntYPMJ6X0C0ngs9plt6uOFS_uOVULau2aY30ycyL5WNP8_w-z-o_BPeHkbGCSRhg_01Pf2989jpj7ukwiQL8xuQ6DKMoDkfR1XRyGceT6Sg-_ADSIghG"
+    },
+    {
+      "stage": 3,
+      "token": "eNrlU8tOwzAQ_JWVzxXqg1IIpwpSUVRaVECcV862sUgcY28KBfHvrJMK5YDEhQMSJ8s7Hs_srP2uUCXvSmMdSCWqKo6mmmssHqzhW280gQnAOUFuAldSwALYow2o2VQWNrIKjgyedOWzAC9xExm6FkZJHl4wgM7RbykDoRDqHApjSfXUxlCRfaurPnpKR2tTravasrFbkXCV51iMHKE7lWywCNRTz7EglGmdGQZ61eQafz9ShJNFGMuo8nezKE0IkkHX4BQW6ewerlfzJThPgfyOAtCO_B5Envx5u4gPw3lVMyA43JdkGUpkURafZHYEy4fF4gtqfIS2kcerdJ2CRgtMgcWk5InGi_iaXIESyXy5TNeth9v2glau4-2rjjaDJyJ3uNYdHZD5JczvGhOxU0-YHTrdmIIpqjUEkZcmXC1TUnfpIr24l0HHxoOkHwQNVe11TGa2Xt00alG_mXH5H4L7xcgEUcmop7j7NwadZzjoDGogx3fN8TeVnA2Ho9Fk2B-dnI6PJ5PxaX_y8QnhSnZw"
+    },
+    {
+      "stage": 4,
+      "token": "eNrlU01P4zAQ_SujOUeItkAhnCo2aItKQQW055EzJdYmjrEn5Uv8d8ZJhXJYaS97WImTlXl5fh-TvCNh_o6GusiYY1sfLIx0VD84K7fBGgYbQSqGykZpdUA1SCAXyYhtHWz1VJwEAps2lBGe00NimE4ZDQd4pgimovDIJSiFyVRQW8eY4dZyXf5RFz8yNMnawpi2c2Ldo0r4NkgaJo7SPeZbqiNn-JQGSll0pRXgF8O-9_dXinLKBFOTVP7fLhobo3YwNriAVXF5D1c3yzX4wJHDjiPwjsMrqDyH8-FQH1aqthMg8PTasBNoSFRZfbLdMawfVqsvqPcRhyC_fhabAgw5EI6iJrVPskHFN-xr0kqW63WxGTzcDhcMciNvX3NyJfxm9vtr_cEeWf6A5V1vIiUNTOU-6dbWwkmtJ6i8hvCdbgnvilVxca-LTsGjth8VjW0XTGrmcnNz3asl_X7HzXco7h9WpgjmRxnK-N-YjD7DyWhRE319h_kswzfMz6bT2Ww-PZydnB4fzefHp4fzj0_hk3Zx"
+    },
+    {
+      "stage": 5,
+      "token": "eNrtVt9v0zAQ_ldOftmGQmlXRrcCD2XNWFHXlmYVQsqL5dxWi9QJttNtTPvfOTttlnblCSSQ2FPi8_347vt8ce4ZZ917JnhhkHVZljZ6whY8nSlpJ1oKBGnAzhHm0tiMDDwFq7kyXFiZKbiiJ-1zCxpFphMDN27hIkRBEQvUcMMNiDnX15gAhSAXc0ilQhawK4lpsrMuewiYcNB6QmSFslJdU4k809YZXUwUDsPTSxCN01WhEV8g9CKor4NYRbOLfcr_ueCUxd7BC3ha7cDFXWaWpxFP0cTqbDq-qBIR_Fh9Gg9GMNaJW2YwHkFWFR704X0Nx6Bf9x5SpxSR-pC04W0-IFu_x-rLeTgN14bIclsYctg7K9IrmaaY7MXq43Q8m8CHrxt1gq3uYzWe9sOpc3tsBvphdBpssELM56xrdYEB-_5M5W9RSee0VyTSAt4KzP1Q7Dyna8CuCQJNJNWWQb2f9RaZY5U3JjpLCmHXktSWwQ76ncuWyWchKlTCdVI5bRjIZX9_2-nlTnVfwZbfAR2DVrPZaLqsfWn8uE6EXSm_odxKzVUPBnInZdViqWX6uKzkfNrmu20YhKLZOGnWdKth8cL94tQ_C_PXhXmgIUrcvPCFs_-7N9JCGkM3UR1gD4bh2SV4-nKNBvWSGMUl6jvIHMVvywfhkHaeFRY45PxugcrCgluqTDhRLhFGs-Gw2vI4TNlIybXgCiwaSyDpA8OlpuJTzFNOlAxGI6K2lLBMUJarYavsJA18Q8xXaUnkcodEHkQehOtUI09WndKH06Kr5gOoPDWRF_ZxgvDWNW6IfUO7Jiu0cMz4U-aqufpe48X_QNwfpIx2WPcoYH4iePUjxLqtoBoV9-ruH_9Wnc9WTcEW5VmybjtgP1j35PCw3e4cNttvjo9edzpHx83Ow0_Rc16o"
+    }
+  ],
+  "queries": [
+    {
+      "sql": "SELECT c.CustomerName,\n       o.OrderID,\n       ol.Quantity * ol.ActualUnitPrice AS LineAmount\nFROM Customers AS c\nJOIN Orders AS o\n  ON o.CustomerID = c.CustomerID\nJOIN OrderLines AS ol\n  ON ol.OrderID = o.OrderID\nWHERE o.OrderStatus = 'Fulfilled'\nORDER BY c.CustomerName, o.OrderID;",
+      "columns": [
+        "CustomerName",
+        "OrderID",
+        "LineAmount"
+      ],
+      "rows": [
+        [
+          "Blue Ridge Design",
+          "O5001",
+          620.0
+        ],
+        [
+          "Blue Ridge Design",
+          "O5001",
+          320.0
+        ],
+        [
+          "Blue Ridge Design",
+          "O5003",
+          275.0
+        ],
+        [
+          "Blue Ridge Design",
+          "O5003",
+          480.0
+        ],
+        [
+          "Patterson Legal",
+          "O5002",
+          700.0
+        ],
+        [
+          "Riverbend Health",
+          "O5004",
+          700.0
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT o.OrderID, c.CustomerName\nFROM Orders AS o\nJOIN Customers AS c\n  ON c.CustomerID = o.CustomerID\nLEFT JOIN Payments AS p\n  ON p.OrderID = o.OrderID\nWHERE p.PaymentID IS NULL\nORDER BY o.OrderID;",
+      "columns": [
+        "OrderID",
+        "CustomerName"
+      ],
+      "rows": [
+        [
+          "O5003",
+          "Blue Ridge Design"
+        ],
+        [
+          "O5004",
+          "Riverbend Health"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT o.OrderID,\n       SUM(ol.Quantity * p.StandardPrice) AS ReportedSales\nFROM Orders AS o\nJOIN OrderLines AS ol\n  ON ol.OrderID = o.OrderID\nJOIN Products AS p\n  ON p.ProductID = ol.ProductID\nGROUP BY o.OrderID\nORDER BY o.OrderID;",
+      "columns": [
+        "OrderID",
+        "ReportedSales"
+      ],
+      "rows": [
+        [
+          "O5001",
+          990.0
+        ],
+        [
+          "O5002",
+          700.0
+        ],
+        [
+          "O5003",
+          805.0
+        ],
+        [
+          "O5004",
+          850.0
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT c.CustomerName AS CustomerName,\nSUM(ol.Quantity * ol.ActualUnitPrice) AS TotalSales\nFROM Customers c\nJOIN Orders o ON o.CustomerID = c.CustomerID\nJOIN OrderLines ol ON ol.OrderID = o.OrderID\nWHERE o.OrderStatus = 'Fulfilled'\nGROUP BY c.CustomerID, c.CustomerName\nORDER BY TotalSales DESC, CustomerName",
+      "columns": [
+        "CustomerName",
+        "TotalSales"
+      ],
+      "rows": [
+        [
+          "Blue Ridge Design",
+          1695.0
+        ],
+        [
+          "Patterson Legal",
+          700.0
+        ],
+        [
+          "Riverbend Health",
+          700.0
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT ol.OrderLineID AS OrderLineID, ol.OrderID AS OrderID,\np.ProductName AS ProductName, ol.ActualUnitPrice AS ActualUnitPrice,\np.StandardPrice AS StandardPrice,\n((p.StandardPrice - ol.ActualUnitPrice) / p.StandardPrice) * 100.0 AS DiscountPct\nFROM OrderLines ol\nJOIN Products p ON p.ProductID = ol.ProductID\nWHERE ol.ActualUnitPrice < p.StandardPrice * 0.90\nORDER BY DiscountPct DESC",
+      "columns": [
+        "OrderLineID",
+        "OrderID",
+        "ProductName",
+        "ActualUnitPrice",
+        "StandardPrice",
+        "DiscountPct"
+      ],
+      "rows": [
+        [
+          "OL06",
+          "O5004",
+          "Desk Lamp",
+          70.0,
+          85.0,
+          17.647058823529413
+        ],
+        [
+          "OL04",
+          "O5003",
+          "Ergonomic Chair",
+          275.0,
+          325.0,
+          15.384615384615385
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT COUNT(*) AS n FROM OrderLines",
+      "columns": [
+        "n"
+      ],
+      "rows": [
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "sql": "WITH x AS (SELECT OrderID FROM Orders) SELECT * FROM x ORDER BY OrderID",
+      "columns": [
+        "OrderID"
+      ],
+      "rows": [
+        [
+          "O5001"
+        ],
+        [
+          "O5002"
+        ],
+        [
+          "O5003"
+        ],
+        [
+          "O5004"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT lower(CustomerName) AS Name FROM Customers ORDER BY Name",
+      "columns": [
+        "Name"
+      ],
+      "rows": [
+        [
+          "blue ridge design"
+        ],
+        [
+          "patterson legal"
+        ],
+        [
+          "riverbend health"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT OrderID,ROW_NUMBER() OVER (ORDER BY OrderID) AS N FROM Orders",
+      "columns": [
+        "OrderID",
+        "N"
+      ],
+      "rows": [
+        [
+          "O5001",
+          1
+        ],
+        [
+          "O5002",
+          2
+        ],
+        [
+          "O5003",
+          3
+        ],
+        [
+          "O5004",
+          4
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT 2.675 AS Value, NULL AS Empty",
+      "columns": [
+        "Value",
+        "Empty"
+      ],
+      "rows": [
+        [
+          2.675,
+          null
+        ]
+      ]
+    }
+  ],
+  "accountingSQL": "SELECT c.CustomerName AS CustomerName,\nSUM(ol.Quantity * ol.ActualUnitPrice) AS TotalSales\nFROM Customers c\nJOIN Orders o ON o.CustomerID = c.CustomerID\nJOIN OrderLines ol ON ol.OrderID = o.OrderID\nWHERE o.OrderStatus = 'Fulfilled'\nGROUP BY c.CustomerID, c.CustomerName\nORDER BY TotalSales DESC, CustomerName",
+  "auditSQL": "SELECT ol.OrderLineID AS OrderLineID, ol.OrderID AS OrderID,\np.ProductName AS ProductName, ol.ActualUnitPrice AS ActualUnitPrice,\np.StandardPrice AS StandardPrice,\n((p.StandardPrice - ol.ActualUnitPrice) / p.StandardPrice) * 100.0 AS DiscountPct\nFROM OrderLines ol\nJOIN Products p ON p.ProductID = ol.ProductID\nWHERE ol.ActualUnitPrice < p.StandardPrice * 0.90\nORDER BY DiscountPct DESC",
+  "rounding": [
+    {
+      "value": 2.675,
+      "digits": 0,
+      "expected": 3.0
+    },
+    {
+      "value": 2.675,
+      "digits": 1,
+      "expected": 2.7
+    },
+    {
+      "value": 2.675,
+      "digits": 2,
+      "expected": 2.67
+    },
+    {
+      "value": 1.005,
+      "digits": 0,
+      "expected": 1.0
+    },
+    {
+      "value": 1.005,
+      "digits": 1,
+      "expected": 1.0
+    },
+    {
+      "value": 1.005,
+      "digits": 2,
+      "expected": 1.0
+    },
+    {
+      "value": -0.125,
+      "digits": 0,
+      "expected": -0.0
+    },
+    {
+      "value": -0.125,
+      "digits": 1,
+      "expected": -0.1
+    },
+    {
+      "value": -0.125,
+      "digits": 2,
+      "expected": -0.12
+    },
+    {
+      "value": 0.005,
+      "digits": 0,
+      "expected": 0.0
+    },
+    {
+      "value": 0.005,
+      "digits": 1,
+      "expected": 0.0
+    },
+    {
+      "value": 0.005,
+      "digits": 2,
+      "expected": 0.01
+    },
+    {
+      "value": 1695.001,
+      "digits": 0,
+      "expected": 1695.0
+    },
+    {
+      "value": 1695.001,
+      "digits": 1,
+      "expected": 1695.0
+    },
+    {
+      "value": 1695.001,
+      "digits": 2,
+      "expected": 1695.0
+    }
+  ]
+}

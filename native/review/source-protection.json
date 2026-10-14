@@ -1,0 +1,19 @@
+{
+  "main_baseline": "7821109de9d14f60ce055dd38db85d9ef99e02da",
+  "all_original_files_preserved_except_additive_gitignore": true,
+  "sha256": {
+    ".streamlit/config.toml": "f0c961ce0c60e5863be2c9b9f38e0139fffeb198fd62c57ce5fd288773770e8f",
+    "README.md": "e79ffa9c58cae4e931ede303586946fe99f485b5ed5631f7ca7f80efd4af9493",
+    "gem_city_sql_investigation/__init__.py": "4628a220ab2b7976095690994c6e8c48851242fa98a33ad7a8db6ae7bd360ec5",
+    "gem_city_sql_investigation/case_data.py": "c1e6a32eaa79c73fe4b6a12f6e75728f5d459acb2236649b5d083dfbee2ba7e2",
+    "gem_city_sql_investigation/engine.py": "d219717b552ff936fd8ba1d8a5af1e198787a7140f58757ba1ef7240c5dea3d1",
+    "gem_city_sql_investigation/progress.py": "ea99e441bdeecffe0a9fce7f6172f97d70b67805bb24b4cb1f0b82ae8ff47df1",
+    "gem_city_sql_investigation/theme.py": "98dd89d10fea00b7bdba96a17d87f6be9e6f686ebcb559731e5d1f573c12585e",
+    "requirements.txt": "47b3c842d2d64e5643d355ba03265da8958711fc1e5ed7137b017077e8c7d8fd",
+    "streamlit_app.py": "8222f52e090cf805ca211f41a9f015b2f03d26630af13896c34c64042fd627dc",
+    "tests/__init__.py": "3162dbd213b03a411228760f9609817ddd6762902cdf75db13d47dde2fbc1700",
+    "tests/test_app_flow.py": "33941adbf738d2b9742afb5dcfd9ef387240438d4afa349db9fd505b294c446f",
+    "tests/test_engine.py": "3c70b129aac077d6df6d4919ef89683becfc7f2c54c9aa7cd4ec881373842782",
+    "tests/test_progress.py": "36c305f5191be74923c1050dc5bf51369c0964b3355f38bf5290ca70e95af6d5"
+  }
+}

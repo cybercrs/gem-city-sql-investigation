@@ -1,0 +1,64 @@
+{
+  "entrypoint": "index.html",
+  "canonical_directory": "js/",
+  "files": {
+    "app.js": {
+      "bytes": 7033,
+      "sha256": "1284faad8c051406be5168783cace0108820b0ff5d3d0837c8ea2f1b17fd9880"
+    },
+    "content.js": {
+      "bytes": 60932,
+      "sha256": "6891d89e32b3b2abb8da9f20e1be29307aefa8749e9ead9229421839f8a199ed"
+    },
+    "core.js": {
+      "bytes": 4524,
+      "sha256": "42a77597b3d129d752d26072e66e62044bc5933dab5961d38b5751bf01f3febd"
+    },
+    "engine.js": {
+      "bytes": 7170,
+      "sha256": "b35d58b6e4122dd8be5ed90077fb28319091d29e42f81fce05a5a7323691a85b"
+    },
+    "index.html": {
+      "bytes": 1956,
+      "sha256": "9afecf880c6c65bb70bbb26931081dd98ed6de34f92f3d59b3ba24df1fca8774"
+    },
+    "original.css": {
+      "bytes": 5129,
+      "sha256": "88502241bef3f7e1905ad543a7a8822208c6cbc853701e9d0f4669193ff712e4"
+    },
+    "sql-client.js": {
+      "bytes": 1078,
+      "sha256": "3ee18a6a95e0c9e4cc2a2be3280af2df09690585322484ab3aebb56577080afe"
+    },
+    "sql-worker.js": {
+      "bytes": 3465,
+      "sha256": "0035682269cd4b0d833cb552a4c10decf11e9df26f90c5a30f94bb2ff41067ee"
+    },
+    "sqlite-lock.json": {
+      "bytes": 606,
+      "sha256": "6be6ea8cf3b09d61b78b17197534022a45d448d4641f9921b90678b5fa5797c3"
+    },
+    "style.css": {
+      "bytes": 5973,
+      "sha256": "545857f8a19a6a509ad5f32d8c12ac2120b4c6b962c91a28525cf0c3bd3fb4d1"
+    },
+    "ui.js": {
+      "bytes": 5327,
+      "sha256": "ce2a0fd358be8547a7f270850da8b320c7bc04da7074d87c98c14e6a526ebfb7"
+    },
+    "vendor/SQLITE-LICENSE.txt": {
+      "bytes": 946,
+      "sha256": "7875d04ed2c2f892a11c0b313a9d03385178ff1189ec5d924cc1f1b91d1d7748"
+    },
+    "vendor/sqlite3.mjs": {
+      "bytes": 469012,
+      "sha256": "80db74cd55eb438ead6b4bcac10df3cfceec8724b0795fb7147d0d1a2271a8c4"
+    },
+    "vendor/sqlite3.wasm": {
+      "bytes": 856447,
+      "sha256": "3c924f7de0fd0979da11615be99ec826a066f8fc804a91c3ec9c45b7d8f1655f"
+    }
+  },
+  "application_bytes": 1429598,
+  "python_runtime": false
+}
