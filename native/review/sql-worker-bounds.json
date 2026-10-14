@@ -1,6 +1,6 @@
 {
   "sqlite_version": "3.50.4",
-  "first_worker_query_ms": 110,
+  "first_worker_query_ms": 123.90000000037253,
   "utf8_result_byte_limit_rejected": true,
   "recovered_rows": [
     [
