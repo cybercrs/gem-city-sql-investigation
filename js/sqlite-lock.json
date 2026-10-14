@@ -1,0 +1,17 @@
+{
+  "package": "@sqlite.org/sqlite-wasm",
+  "version": "3.50.4-build1",
+  "url": "https://registry.npmjs.org/@sqlite.org/sqlite-wasm/-/sqlite-wasm-3.50.4-build1.tgz",
+  "archive_integrity": "sha512-Qig2Wso7gPkU1PtXwFzndh+CTRzrIFxVGqv6eCetjU7YqxlHItj+GvQYwYTppCRgAPawtRN/4AJcEgB9xDHGug==",
+  "sqlite_version": "3.50.4",
+  "files": {
+    "sqlite3.mjs": {
+      "sha256": "80db74cd55eb438ead6b4bcac10df3cfceec8724b0795fb7147d0d1a2271a8c4",
+      "bytes": 469012
+    },
+    "sqlite3.wasm": {
+      "sha256": "3c924f7de0fd0979da11615be99ec826a066f8fc804a91c3ec9c45b7d8f1655f",
+      "bytes": 856447
+    }
+  }
+}
